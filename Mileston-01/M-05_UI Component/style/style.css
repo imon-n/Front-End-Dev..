@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    padding: 25px;
+    background-color: blanchedalmond;
+    display: flex;
+    gap: 30px;
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+
+    height: 305px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    /* align-items: stretch; */
+    /* align-items: start; */
+    /* align-items: end; */
+
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+}
+
+
+.child{
+    border: 2px solid rgb(15,158,160);
+    background: rgb(178, 228,229);
+    padding: 20px;
+    font-size: 28px;
+    /* margin: 10px 0;   */
+}

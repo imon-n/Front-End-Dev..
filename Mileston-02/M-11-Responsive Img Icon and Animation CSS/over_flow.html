@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width: 250px;
+            border: 2px solid rebeccapurple;
+            height: 200px;
+            overflow: auto;
+            /* overflow: scroll; */
+            /* overflow-y: scroll; */
+            /* overflow-x: scroll;
+            overflow-x: hidden; */
+        }
+        /* #box-1{
+            overflow: auto;
+            overflow-x: hidden;
+        } */
+
+        .ellipsis{
+            width: 200px;
+            border: 2px solid steelblue;
+            white-space: nowrap;
+            overflow: hidden;
+            /* overflow: scroll; */
+            text-overflow: ellipsis;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <p title="I am a serious learning. I am investing at least 6-8hrs every single day. No gap at all" class="ellipsis">I am a serious learning. I am investing at least 6-8hrs every single day. No gap at all</p>
+    </header>
+    <section>
+        <div id="box-1" class="box">
+            <h3>My Box 1</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas accusantium soluta praesentium, quisquam ex harum quae. Consequatur impedit veritatis voluptatem! Temporibus laborum sit non ipsa quo? Atque, a incidunt?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas accusantium soluta praesentium, quisquam ex harum quae. Consequatur impedit veritatis voluptatem! Temporibus laborum sit non ipsa quo? Atque, a incidunt?
+            </p>
+        </div>
+        <div class="box">
+            <h3>My Box 2</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas accusantium soluta praesentium, quisquam ex harum quae. Consequatur impedit veritatis voluptatem! Temporibus laborum sit non ipsa quo? Atque, a incidunt?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas accusantium soluta praesentium, quisquam ex harum quae. Consequatur impedit veritatis voluptatem! Temporibus laborum sit non ipsa quo? Atque, a incidunt?
+            </p>
+        </div>
+        <div class="box">
+            <h3>My Box 3</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas accusantium soluta praesentium, quisquam ex harum quae. Consequatur impedit veritatis voluptatem! Temporibus laborum sit non ipsa quo? Atque, a incidunt?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas accusantium soluta praesentium, quisquam ex harum quae. Consequatur impedit veritatis voluptatem! Temporibus laborum sit non ipsa quo? Atque, a incidunt?
+            </p>
+        </div>
+    </section>
+</body>
+</html>

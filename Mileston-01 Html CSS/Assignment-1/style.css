@@ -1,0 +1,289 @@
+  
+  .fira-sans-regular {
+    font-family: "Fira Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .fira-sans-medium {
+    font-family: "Fira Sans", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .fira-sans-semibold {
+    font-family: "Fira Sans", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .fira-sans-bold {
+    font-family: "Fira Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 150px;
+}
+
+nav p{
+    font-size: 32px;
+}
+
+.btn-primary{
+    background-color: white;
+    font-weight: bold;
+    color: #006A50;
+    border: 2px solid #006A50;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+.banner{
+    display: flex;
+    /* background-color: #C6E4D6; */
+    background-color: #c1e2d2;
+    padding: 60px 40px;
+    margin: 25px 150px;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.banner p{
+    color: #006A50;
+}
+
+.banner h3{
+    font-size: 30px;
+}
+
+.banner button, .news button{
+    background-color: #006A50;
+    color: #FFFFFF;
+}
+
+.banner img{
+    width: 90%;
+}
+
+.goals-section{
+    margin: 70px 150px;
+}
+
+.goals-section .title, .vision-section .title{
+    font-size: 30px;
+}
+
+.pillars{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.pillars h5, .visions h5{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.vision-section , .recent-news{
+    margin: 70px 150px;
+}
+
+.pillars p, .vision-section p{
+    font-size: 16px;
+}
+
+.visions{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.banner button{
+    background-color: #006A50;
+    color: #FFFFFF;
+}
+
+.vision-btn-1{
+    border: none;
+    background-color: #5490F5;
+    color: #FFFFFF;
+}
+
+.vision{
+    background-color: #c3cee1;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.vision-btn-2{
+    border: none;
+    background-color: #09A15C;
+    color: #FFFFFF;
+}
+
+.vision-btn-3{
+    border: none;
+    background-color: #FFC239;
+    color: #FFFFFF;
+}
+
+.dr-yunus{
+    margin: 70px 150px;
+    background-image: url('./B11A1--assignment-1/assets/quote-bg.png');
+    background-repeat: no-repeat;
+    background-position: top left; 
+    padding-top: 18px;
+}
+
+.dr-yunus .p1, .recent-news .p1{
+    color: #0E0E0E;
+    font-size: 16px;  
+}
+
+.dr-yunus h5{
+    color: #0E0E0E;
+    font-size: 20px;  
+    margin-bottom: 0px;
+}
+
+.dr-yunus .p2{
+    font-size: 16px; 
+    opacity: 80%; 
+}
+
+/* .recent-news{
+    margin: 70px 150px;
+} */
+
+.recent-news h5{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.news1{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    /* margin-bottom: 30px; */
+    margin-top: 1px;
+    padding-bottom: 60px;
+}
+
+.news .satalite{
+    border-radius: 20px;
+    width: 350px;
+    height: 280px;
+
+}
+
+.news1 h5{
+    margin-bottom: 1px;
+    margin-top: -10px;
+}
+
+.news span{
+    margin: 0px 10px;
+}
+
+.news{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.donates{
+    text-align: center;
+    margin: 70px 150px;
+}
+
+.taka{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+
+.tk{
+    background-color: white;
+    font-weight: bold;
+    color: #006A50;
+    border: 1px solid #bececb;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+.tk2{
+    background-color: white;
+    font-weight: bold;
+    color: #006A50;
+    border: 4px solid #006A50;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+.other{
+    opacity: 70%;
+    margin-bottom: 20px;
+}
+
+.donates h5{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.donates button{
+    background-color: #006A50;
+    color: #FFFFFF;
+}
+
+.subscribes{
+    margin: 70px 280px;
+    text-align: center;
+}
+
+.subscribes h5{
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+input[type="email"]{
+    height: 34px;
+    width: 40%;
+    background-color: rgb(234, 221, 221);
+    padding: 10px 190px;
+    border: 1px solid #8a918f;
+    font-size: 20px;
+    color: #333;
+}
+
+.subscribes button{
+    font-size: 30px;
+    background-color: #006A50;
+    font-weight: bold;
+    color:  white;
+    padding: 10px 20px;
+}
+
+.subscribes .last{
+    opacity: 80%;
+}
+
+.serach-cotainer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* gap: 30px; */
+}
+

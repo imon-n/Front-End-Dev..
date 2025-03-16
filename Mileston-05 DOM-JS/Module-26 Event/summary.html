@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Summary</title>
+  </head>
+  <body>
+    <input id="name-input" placeholder="Your Name" type="text" />
+    <button onclick="addName()">Add Name</button>
+    <div id="name-container"></div>
+
+    <script>
+      function addName() {
+        const nameInput = document.getElementById("name-input");
+        const newName = nameInput.value;
+
+        // parent 
+        const nameContainer = document.getElementById("name-container");
+
+        // create p
+        const p = document.createElement("p");
+        p.innerText = newName;
+
+        // append
+        nameContainer.appendChild(p);
+        nameInput.value = " ";
+      }
+    </script>
+  </body>
+</html>

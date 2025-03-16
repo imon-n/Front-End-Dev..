@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Events</title>
+  </head>
+  <body>
+    <h1>Dom Events</h1>
+    <!-- option 1 for event handle  -->
+    <button onclick="console.log(7);">Click me</button>
+    <button onclick="console.log('i am clicked');">3rd btn</button>
+    <br />
+    <br />
+
+    <!-- option 2 for click handler  -->
+    <button onclick="makeRed()">Make Red</button>
+
+    <br /><br />
+    <!-- option 3: get element by id and then set onclick to a function -->
+    <button id="btn-make-blue">Make Blue</button>
+
+    <br />
+    <br />
+
+    <!-- option 4: addEventListener -->
+    <button id="btn-make-green">Make Green</button>
+
+    <script>
+      function makeRed() {
+        // console.log("make red");
+        document.body.style.backgroundColor = "red";
+      }
+
+      document
+        .getElementById("btn-make-green")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = "green";
+        });
+
+      const btnMakeBlue = document.getElementById("btn-make-blue");
+      btnMakeBlue.onclick = function () {
+        document.body.style.backgroundColor = "blue";
+      };
+    </script>
+  </body>
+</html>

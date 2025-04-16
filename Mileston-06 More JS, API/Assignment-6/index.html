@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 6</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <style>
+      .poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .active {
+        background: #422AD5;
+        color: white;
+      }
+      .hide {
+        display: none;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+    </style>
+
+  </head>
+
+  <body class="scroll-smooth">
+    <header>
+      <nav
+        class="navbar bg-base-100 shadow-sm w-11/12 mx-auto border-b-2 py-5 border-gray-300"
+      >
+        <div class="navbar-start text-md font-semibold space-x-1">
+          <p class="">English</p>
+          <img class="w-8" src="./img/logo.png" alt="" />
+          <a class="">জানালা</a>
+        </div>
+
+        <div class="navbar-end space-x-2 text-sm">
+          <a href="#faq"
+            class="btn btn-sm border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white font-bold"
+          >
+          <i class="fa-solid fa-circle-question"></i>
+            FAQ
+          </a>
+          <a href="#learn"
+            class="btn btn-sm border border-[#422AD5] hover:bg-[#422AD5] hover:text-white text-[#422AD5] font-bold"
+          >
+          <i class="fa-solid fa-book-open"></i>
+            Learn
+          </a>
+          <a id="logout"
+            class="btn btn-sm border border-[#422AD5] hover:bg-[#422AD5] hover:text-white text-[#422AD5]  font-bold"
+          >
+          <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+          </a>
+        </div>
+      </nav>
+
+      <!-- banner  -->
+      <div id="banner" class="hero bg-base-200 min-h-screen">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="text-center w-3/6 lg:text-left">
+            <img src="./img/hero-student.png" alt="" />
+          </div>
+
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <div class="space-y-8">
+                <h2 class="poppins text-4xl">
+                  <span class="text-[#00BCFF]">English</span> is Easy!
+                </h2>
+                <p class="text-[#18181B90]">
+                  আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন
+                  অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons
+                  আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+              </div>
+              <fieldset class="fieldset">
+                <input id="name" type="text" class="input" placeholder="Name" />
+                <input id="pass" type="password" class="input" placeholder="Password(123456)" />
+                <button onclick="getValue()" class="btn bg-[#422AD5] font-bold text-white">
+                  Get Started
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+     
+
+    <main class="container mx-auto my-10">
+      <!-- learn section  -->
+      <div>
+        <div id="learn" class="text-center space-y-4 mt-16">
+          <h3 class="text-2xl font-bold">
+            <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+          </h3>
+          <div id="level-btn" class="grid grid-cols-2 md:grid-cols-7 gap-1 w-4/5 mx-auto">     
+            <!-- levels all button -->
+          </div>
+
+          <div id="spinner" style="display:none;">
+            <span class="loading loading-spinner loading-3xl"></span>
+          </div>
+
+        </div>
+
+        <div id="default-card">
+          
+        </div>
+
+
+        <div class="cards grid grid-cols-3 gap-4 w-10/12 mx-auto">
+          <!-- all cards here -->
+        </div>
+
+
+        <div id="no-word-card">
+          
+        </div>
+
+        
+
+
+        <!-- modal  -->
+        <!-- Open the modal using ID.showModal() method -->
+        <div>
+          <dialog id="word_details" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+             <div id="details-container">
+
+              <!-- modals  -->
+
+             </div>
+            </div>
+          </dialog>
+        </div>
+        
+
+        <!-- FAQ  -->
+         <div id="faq" class="mt-10 w-11/12 mx-auto">
+          <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">1. Difference between var, let, and const?</div>
+            <div class="collapse-content text-sm">The let and const is Block scoped variable and var is global scope. const type varibale not allowed Ressignment but var and let are allowed to Ressignmen.</div>
+          </div>
+          <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">2. Difference between map(), forEach(), and filter()?</div>
+            <div class="collapse-content text-sm">By using map() method, traverse each element and altemately return a new array,by forEach() method, traverse each element but it can not return any new array, by filter() method, it traverse all element with conditional filtering</div>
+          </div>
+          <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">3. Explanation of arrow functions and their differences from regular functions?</div>
+            <div class="collapse-content text-sm">Arrow function used in callbacks and comonlly for short function ,but regular function generally not short like arrow function.</div>
+          </div>
+          <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">4. How JavaScript Promises work?</div>
+            <div class="collapse-content text-sm">Promise used for asynchronous operation, it helps to handle resolve and reject states.</div>
+          </div>
+          <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">5. How closures work in JavaScript?</div>
+            <div class="collapse-content text-sm">Clouser allows to return a function.</div>
+          </div>
+         </div>
+      </div>
+    </main>
+
+
+    <footer class="flex justify-around gap-80  bg-slate-200 mx-auto p-10 mt-20 ">
+      <div class="space-y-5">
+        <div class="flex items-center space-x-1 font-bold">
+          <p class="">English</p>
+          <img class="w-8" src="./img/logo.png" alt="" />
+          <a class="">জানালা</a>
+        </div>
+        <div class="space-y-1">
+          <p class="text-sm font-semibold">ইংরেজি শিখুন সহজে</p>
+          <p class="text-sm text-[#00000090]">Providing ED-Tech Applications since 2025</p>
+        </div>
+      </div>
+      <div class="space-x-2 space-y-2  text-sm">
+        <p class="text-lg text-center font-bold text-[#00000090]">Follow us</p>
+        <div class="flex items-center space-x-3">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="./img/fb-thumb.png" alt="" >
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <img src="./img/youtube-thumb.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="./img/instagram-thumb.png" alt="">
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+
+    <script src="./index.js"></script>
+  </body>
+</html>

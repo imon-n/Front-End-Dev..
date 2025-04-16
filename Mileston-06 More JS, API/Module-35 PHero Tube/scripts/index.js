@@ -110,15 +110,15 @@ const displayViedos = (videos) => {
             </div>
         </div>
 
-        <button onclick="loadVideoDetails('${
-          video.video_id
-        }')" class="btn btn-block border border-gray-500">Details</button>
+        <button onclick="loadVideoDetails('${video.video_id}')" class="btn btn-block border border-gray-500">Details</button>
 
     </div>
 `;
 
-    //apend
-    vedioContainer.append(vedioCard);
+
+
+  //apend
+  vedioContainer.append(vedioCard);
   });
 };
 
